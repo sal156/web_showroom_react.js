@@ -1,0 +1,161 @@
+/* src/styles/AutoLoanCalculator.css */
+.calculator-section {
+  width: 100%;
+  background-color: #f8f8f8; /* Latar belakang terang */
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.calculator-content-wrapper {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  background-color: white; /* Kartu kalkulator dan gambar memiliki latar putih */
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.auto-loan-calculator-card {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #333;
+}
+
+.auto-loan-calculator-card h2 {
+  font-size: 2.2em;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.auto-loan-calculator-card p {
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.calculator-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dua kolom input */
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.input-group input {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.calculate-btn {
+  background-color: #4A4AFF; /* Warna biru tombol */
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 250px;
+  margin-bottom: 20px;
+}
+
+.calculate-btn:hover {
+  background-color: #3a3ac8;
+}
+
+.monthly-payment-result {
+  text-align: center;
+  background-color: #e6f7ff; /* Latar belakang hasil */
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  color: #333;
+  border-left: 4px solid #007bff; /* Tambahan garis aksen */
+}
+
+.monthly-payment-result p {
+  margin: 0 0 5px 0;
+  font-size: 0.95em;
+  color: #444;
+}
+
+.monthly-payment-result h3 {
+  margin: 0;
+  font-size: 1.8em;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.calculator-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e0e6ff;
+}
+
+.calculator-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsif untuk tablet dan ponsel */
+@media (max-width: 992px) {
+  .calculator-content-wrapper {
+    flex-direction: column;
+  }
+  .calculator-image {
+    padding: 30px;
+  }
+  .calculator-image img {
+    max-width: 80%;
+  }
+  .calculator-inputs {
+    grid-template-columns: 1fr; /* Input satu kolom */
+  }
+  .auto-loan-calculator-card {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .calculator-section {
+    padding: 40px 15px;
+  }
+  .auto-loan-calculator-card {
+    padding: 25px;
+  }
+  .auto-loan-calculator-card h2 {
+    font-size: 1.8em;
+  }
+  .auto-loan-calculator-card p {
+    font-size: 0.9em;
+  }
+  .calculate-btn {
+    max-width: 100%;
+  }
+}

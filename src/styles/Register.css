@@ -1,0 +1,121 @@
+/* src/styles/Register.css */
+.register-page {
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.register-container {
+  background-color: rgba(255, 255, 255, 0.4); /* Transparan */
+  backdrop-filter: blur(10px); /* Efek blur pada latar belakang */
+  -webkit-backdrop-filter: blur(10px); /* Dukungan untuk Safari */
+  border-radius: 10px;
+  padding: 40px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.register-container h2 {
+  font-size: 2.5em;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1em;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.input-group input::placeholder {
+  color: #666;
+}
+
+.register-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.6); /* Tombol gelap transparan */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.divider {
+  margin: 25px 0;
+  color: #555;
+  font-size: 1.1em;
+}
+
+.social-login-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-btn {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-btn img {
+  width: 40px;
+  height: 40px;
+}
+
+.social-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.error-message {
+  color: #d9534f;
+  background-color: #f2dede;
+  border: 1px solid #ebccd1;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .register-container {
+    padding: 25px;
+  }
+  .register-container h2 {
+    font-size: 2em;
+  }
+}

@@ -1,0 +1,199 @@
+/* src/styles/Footer.css */
+.main-footer {
+  background-color: #1a1a1a; /* Latar belakang gelap seperti di gambar */
+  color: #ccc;
+  padding: 60px 20px 20px 20px;
+  font-size: 0.95em;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 2fr; /* Kolom untuk tata letak */
+  gap: 30px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 40px;
+  margin-bottom: 20px;
+}
+
+.footer-col {
+  padding: 0 10px; /* Sedikit padding internal */
+}
+
+.footer-logo {
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.footer-col p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.footer-contact-info p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.footer-contact-info i {
+  color: #007bff;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.3em;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
+
+.footer-col h3 {
+  color: white;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #007bff;
+}
+
+.app-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.app-badges img {
+  width: 140px; /* Ukuran badge aplikasi */
+  height: auto;
+  border-radius: 5px;
+}
+
+.newsletter-form {
+  display: flex;
+  margin-top: 15px;
+}
+
+.newsletter-form input {
+  flex-grow: 1;
+  padding: 10px 15px;
+  border: 1px solid #444;
+  background-color: #2e2e2e;
+  color: white;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.newsletter-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #0056b3;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Agar bisa wrap di layar kecil */
+}
+
+.footer-bottom p {
+  margin: 5px 0;
+  color: #bbb;
+}
+
+.footer-bottom a {
+  color: #bbb;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+  color: #007bff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr; /* Dua kolom di tablet */
+  }
+  .footer-col.about {
+    grid-column: span 2; /* Kolom about mengambil 2 kolom */
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr; /* Satu kolom di ponsel */
+    gap: 20px;
+  }
+  .footer-col {
+    padding: 0;
+    text-align: center;
+  }
+  .footer-logo, .footer-col h3 {
+    text-align: center;
+  }
+  .footer-contact-info p {
+    justify-content: center;
+  }
+  .social-icons {
+    text-align: center;
+  }
+  .app-badges {
+    align-items: center;
+  }
+  .newsletter-form {
+    max-width: 300px; /* Batasi lebar form di ponsel */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}

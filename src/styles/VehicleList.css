@@ -1,0 +1,304 @@
+.vehicle-list-section {
+  width: 100%;
+  background-color: #2e2e2e;
+  padding: 50px 0;
+  color: white;
+}
+
+.vehicle-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto 30px auto;
+  padding: 0 20px;
+}
+
+.vehicle-list-header h2 {
+  font-size: 2em;
+  margin: 0;
+}
+
+.view-all-link {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s ease;
+}
+
+.view-all-link:hover {
+  color: #0056b3;
+}
+
+.vehicle-filters {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  padding: 0 20px;
+  border-bottom: 1px solid #444;
+  gap: 20px;
+}
+
+.filter-btn {
+  background: none;
+  border: none;
+  color: #bbb;
+  font-size: 1.1em;
+  padding: 10px 0;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.filter-btn.active {
+  color: white;
+}
+
+.filter-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #007bff;
+}
+
+.filter-btn:hover:not(.active) {
+  color: #ddd;
+}
+
+.vehicle-cards-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.vehicle-cards-container {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 20px;
+  gap: 20px;
+  -ms-overflow-style: none;
+}
+
+.vehicle-cards-container::-webkit-scrollbar {
+  display: none;
+}
+
+.vehicle-card {
+  flex: 0 0 300px;
+  background-color: #3a3a3a;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+  color: white;
+}
+
+.vehicle-card:hover {
+  transform: translateY(-5px);
+}
+
+.vehicle-image-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.vehicle-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vehicle-tag {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.vehicle-tag.low-mileage {
+  background-color: #007bff;
+}
+
+.vehicle-tag.new-arrival {
+  background-color: #ff9800;
+}
+
+
+.vehicle-details {
+  padding: 15px;
+}
+
+.vehicle-details h3 {
+  font-size: 1.3em;
+  margin: 0 0 5px 0;
+}
+
+.vehicle-description {
+  font-size: 0.9em;
+  color: #bbb;
+  margin-bottom: 15px;
+}
+
+.vehicle-specs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 0.85em;
+  color: #ccc;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.vehicle-specs div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.vehicle-price-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  border-top: 1px solid #444;
+}
+
+.vehicle-price {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.view-details-link {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 0.95em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s ease;
+}
+
+.view-details-link:hover {
+  color: #0056b3;
+}
+
+/* Panah navigasi kiri dan kanan */
+.scroll-navigation {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.scroll-btn {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.2em;
+  opacity: 0.8;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+  pointer-events: all;
+}
+
+.scroll-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 1;
+}
+
+.scroll-btn.left {
+  margin-left: -20px;
+}
+
+.scroll-btn.right {
+  margin-right: -20px;
+}
+
+/* Responsiveness */
+@media (max-width: 1200px) {
+  .vehicle-list-header,
+  .vehicle-filters,
+  .vehicle-cards-wrapper {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .vehicle-list-header h2 {
+    font-size: 1.6em;
+  }
+
+  .filter-btn {
+    font-size: 1em;
+    padding: 8px 0;
+  }
+
+  .vehicle-card {
+    flex: 0 0 280px;
+  }
+
+  .scroll-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .vehicle-list-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .vehicle-filters {
+    overflow-x: auto;
+    padding-bottom: 10px;
+    justify-content: flex-start;
+  }
+
+  .filter-btn {
+    white-space: nowrap;
+  }
+
+  .vehicle-card {
+    flex: 0 0 250px;
+  }
+
+  .vehicle-image-container {
+    height: 180px;
+  }
+
+  .vehicle-details h3 {
+    font-size: 1.1em;
+  }
+
+  .vehicle-price {
+    font-size: 1.2em;
+  }
+}

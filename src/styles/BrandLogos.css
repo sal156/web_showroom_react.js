@@ -1,0 +1,108 @@
+/* src/styles/BrandLogos.css */
+
+.brand-logos-section {
+  width: 100%;
+  background-color: #e0e0e0; /* Warna abu-abu */
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.brand-logos-container {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 20px 10px;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+
+  /* Sembunyikan scrollbar */      /* Firefox */
+  -ms-overflow-style: none;   /* IE/Edge */
+}
+
+.brand-logos-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.brand-card {
+  flex: 0 0 auto;
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.brand-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.brand-logo-image {
+  max-width: 80px;
+  max-height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.brand-name {
+  font-size: 0.9em;
+  color: #333;
+  text-align: center;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .brand-logos-section {
+    padding: 20px 0;
+  }
+
+  .brand-logos-container {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .brand-card {
+    width: 120px;
+    height: 120px;
+  }
+
+  .brand-logo-image {
+    max-width: 60px;
+    max-height: 60px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .brand-logos-container {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .brand-card {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+  }
+
+  .brand-logo-image {
+    max-width: 50px;
+    max-height: 50px;
+  }
+
+  .brand-name {
+    font-size: 0.8em;
+  }
+}

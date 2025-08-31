@@ -1,0 +1,208 @@
+/* src/styles/LatestBlogPosts.css */
+:root {
+  --primary-blue: #007bff;
+  --primary-blue-hover: #0056b3;
+  --text-color-dark: #333;
+  --text-color-muted: #666;
+  --bg-card: #f8f8f8;
+  --shadow-card: rgba(0, 0, 0, 0.08);
+}
+
+.latest-blog-posts-section {
+  width: 100%;
+  background-color: white; /* Latar belakang terang */
+  padding: 80px 20px;
+  box-sizing: border-box;
+  color: var(--text-color-dark);
+}
+
+.blog-posts-header {
+  max-width: 1200px;
+  margin: 0 auto 50px auto;
+  text-align: left;
+}
+
+.blog-posts-header h2 {
+  font-size: 2.2em;
+  margin: 0;
+}
+
+.blog-posts-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px; /* Supaya tombol tidak terlalu di tepi */
+}
+
+.blog-posts-container {
+  display: flex;
+  overflow-x: auto; /* Mengaktifkan scrolling horizontal */
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 20px; /* Jarak untuk scrollbar */
+  gap: 25px; /* Jarak antar kartu */
+  /*scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scroll-behavior: smooth;
+}
+
+.blog-posts-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.blog-card {
+  flex: 0 0 320px; /* Lebar setiap kartu blog */
+  background-color: var(--bg-card); /* Latar belakang kartu blog */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px var(--shadow-card);
+  transition: transform 0.2s ease-in-out;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-image {
+  width: 100%;
+  height: 200px; /* Tinggi gambar blog */
+  object-fit: cover;
+  display: block;
+}
+
+.blog-content {
+  padding: 20px;
+}
+
+.blog-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85em;
+  color: var(--text-color-muted);
+  margin-bottom: 10px;
+}
+
+.blog-category {
+  font-weight: bold;
+  color: var(--primary-blue);
+}
+
+.blog-content h3 {
+  font-size: 1.3em;
+  margin: 0 0 10px 0;
+  color: var(--text-color-dark);
+}
+
+.blog-description {
+  font-size: 0.95em;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+ /* Batasi hingga 3 baris */
+  -webkit-box-orient: vertical;
+  max-height: 4.5em; /* Fallback untuk clamp */
+}
+
+.read-more-link {
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s ease;
+}
+
+.read-more-link:hover {
+  color: var(--primary-blue-hover);
+}
+
+.blog-scroll-navigation {
+  position: absolute;
+  top: 50%; /* Tengah vertikal dari container wrapper */
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none; /* Agar klik bisa melewati tombol jika diperlukan */
+  padding: 0 10px; /* Tambahan padding */
+}
+
+.blog-scroll-navigation .scroll-btn {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.2em;
+  opacity: 0.8;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+  pointer-events: all; /* Aktifkan kembali pointer events untuk tombol */
+}
+
+.blog-scroll-navigation .scroll-btn:hover,
+.blog-scroll-navigation .scroll-btn:focus {
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 1;
+  outline: none;
+}
+
+.blog-scroll-navigation .scroll-btn:focus {
+  outline: 2px solid var(--primary-blue);
+  outline-offset: 2px;
+}
+
+.blog-scroll-navigation .scroll-btn.left {
+  margin-left: -10px; /* Sedikit geser ke kiri */
+}
+
+.blog-scroll-navigation .scroll-btn.right {
+  margin-right: -10px; /* Sedikit geser ke kanan */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .blog-card {
+    flex: 0 0 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .latest-blog-posts-section {
+    padding: 50px 15px;
+  }
+  .blog-posts-header h2 {
+    font-size: 1.8em;
+  }
+  .blog-card {
+    flex: 0 0 280px;
+  }
+  .blog-image {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .latest-blog-posts-section {
+    padding: 30px 10px;
+  }
+  .blog-card {
+    flex: 0 0 250px;
+  }
+  .blog-image {
+    height: 150px;
+  }
+  .blog-content h3 {
+    font-size: 1.1em;
+  }
+  .blog-description {
+    font-size: 0.85em;
+  }
+}
